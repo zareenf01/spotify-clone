@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body,
+html {
+  height: 100%;
+}
+.gradient {
+  animation: gradientAnimation 10s infinite ease-in;
+  background: #060606;
+  background: linear-gradient(to top, #0c0c0c 35%, #282069 100%);
+}
+
+.hero {
+  height: 31rem;
+}
+
+/* @keyframes gradientAnimation {
+  0%,
+  100% {
+    background: #070f0b;
+    background: linear-gradient(to top, #070f0b 38%, #2c19d8 100%);
+  }
+  25% {
+    background: linear-gradient(to top, #ff4d4d, #4d79ff);
+  }
+  50% {
+    background: linear-gradient(to top, #4d79ff, #33ccff);
+  }
+  75% {
+    background: linear-gradient(to top, #33ccff, #99ff99);
+  }
+
+  /* 50% {
+    background: linear-gradient(to right, #4d79ff, #33ccff);
+  } */
+/* 75% {
+    background: linear-gradient(to right, #33ccff, #99ff99);
+  } */
+/* 100% {
+    background: linear-gradient(to right, #99ff99, #ffad33);
+  } */
+/* } */
