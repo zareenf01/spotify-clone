@@ -52,6 +52,7 @@ function Hero({ showSearch, toggleSearch }) {
     [selectedPlaylist],
     [selectedLiked]
   );
+
   // console.log("TRACKSSS", tracks);
   const searchResult = useSelector((state) => state.search.data);
 

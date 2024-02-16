@@ -6,6 +6,7 @@ import SpotifyWebApi from "spotify-web-api-js";
 import { setUser } from "./features/userSlice";
 import { setLiked, setRecentPlay } from "./features/playlistSlice";
 import { setRecent, setPlayToken } from "./features/recentSlice";
+import { setCurrent } from "./features/currentSlice";
 import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPg from "./LoginPg";
@@ -15,7 +16,7 @@ const spotify = new SpotifyWebApi();
 
 function App() {
   const result = searchResult();
-  console.log(result);
+  // console.log(result);
   const dispatch = useDispatch();
   const [token, setToken] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -35,10 +36,17 @@ function App() {
           const recent = await spotify.getMyRecentlyPlayedTracks();
           recent && dispatch(setRecent(recent));
 
+          const forYou = await spotify.getMyTopArtists();
+          forYou && console.log("RECOMMENDATIONSS", forYou);
+
           const playlistsResponse = await spotify.getUserPlaylists(user.id);
           const playlists = playlistsResponse.items;
           playlists && dispatch(setRecentPlay(playlists));
 
+          const current = await spotify.getMyCurrentPlayingTrack();
+          console.log("CURRENTT", current);
+          current && dispatch(setCurrent(current));
+          // window.location.reload();
           setLoading(false);
         }
       } catch (error) {

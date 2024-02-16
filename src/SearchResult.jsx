@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 function SearchResult() {
   const result = useSelector((state) => state.search.data);
-  console.log("Resulttt", result);
+  // console.log("Resulttt", result);
   return (
     <div className="mb-10">
       {result &&
