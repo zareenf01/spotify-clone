@@ -1,6 +1,6 @@
 # Spotify Clone
 
-Spotify Clone is a web application built using React and the Spotify Web API. It mimics the functionality of the Spotify web player, allowing users to authenticate with their Spotify accounts and access various features like viewing playlists, playing tracks, and exploring recommendations.
+Spotify Clone is a web application built using React and the Spotify Web API. It mimics the functionality of the Spotify web player, allowing users to authenticate with their Spotify accounts and access various features like viewing playlists, recently played, search tracks, and exploring recommendations.
 
 ## Prerequisites
 
